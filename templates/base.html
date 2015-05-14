@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Madrid Activities </title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href='{{STATIC_URL}}css/main.css'/>
+</head>
+
+<body>
+
+<div id="wrapper">
+
+   <div id="header">
+      <h1><b>MADRID ACTIVITIES</b></h1>
+      {%block titulo %}{% endblock %}
+      {% block encabezado %}{% endblock %}
+
+      {% block contenido %}{% endblock %}
+
+
+	<ul>		
+		<li><a href="/" title="">Inicio</a></li>
+		<li><a href="/login" title="">Login</a></li>
+		<li><a href="/logout" title="">Logout</a></li>
+		
+	</ul>
+   </div>
+   
+ 
+   <div id="leftcolumn">
+     <h1>Header H1</h1>
+<img src="images/img3.jpg" class="floatTL" alt="nice apartment" />
+      
+ 
+      <p>Parrafada de aqui </p>
+<h2>Sub header H2</h2>
+  
+
+<p>Parrafada mas pequeña aqui</p>
+
+
+   
+   <div id="rightcolumn">
+      <p><b>Links</b></p>
+      	<ul>
+		<li><a href="http://www.getcsstemplates.com" title="free css templates">CSS Layouts</a></li>
+		<li><a href="#" title="">Link Two</a></li>
+		<li><a href="#" title="">Link Three</a></li>
+		<li><a href="#" title="">Link Four</a></li>
+		<li><a href="#" title="">Link Five</a></li>
+	</ul>
+     <h4>More Links</h4>
+	<ul>
+		<li><a href="#">Example Link 1</a></li>
+		<li><a href="#">Example Link 2</a></li>
+		<li><a href="#">Example Link 3</a></li>
+		<li><a href="#">Example Link 4</a></li>
+	</ul>
+     <h4>News</h4>
+<blockquote><p>Nulla facilisi.Lorem ipsum dolor sit amet, <a href="#">consectetuer adipiscing</a> elit.</p></blockquote>
+   </div>
+   
+   <div id="footer">
+       <br /> Copyright &copy; 2015 by Daniel Crespo. Designed by: <a href="https://github.com/creespow"title="my_name">creespow</a>   </div>
+</div>
+   
+</body>
+</html>
