@@ -1,68 +1,50 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<title>Madrid Activities </title>
+  <title>Actividades Culturales de Madrid</title>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href='{{STATIC_URL}}css/main.css'/>
+  <link rel="stylesheet" type="text/css" href='{{STATIC_URL}}css/main.css'/>  
 </head>
 
 <body>
 
 <div id="wrapper">
 
-   <div id="header">
-      <h1><b>MADRID ACTIVITIES</b></h1>
-      {%block titulo %}{% endblock %}
-      {% block encabezado %}{% endblock %}
+  <div id="fondo">
+    <img src="{{STATIC_URL}}css/images/url.jpg">
+  </div>
 
-      {% block contenido %}{% endblock %}
+  <div id="header">
+    <h1><b>Actividades Culturales de Madrid - {%block titulo %}{% endblock %}</b></h1>
+    <ul>		
+      <li><a href="/" title="">Inicio</a></li>
+      <li>{% block login %}{% endblock %}</li> 
+    </ul>
+  </div>
 
-
-	<ul>		
-		<li><a href="/" title="">Inicio</a></li>
-		<li><a href="/login" title="">Login</a></li>
-		<li><a href="/logout" title="">Logout</a></li>
-		
-	</ul>
-   </div>
-   
- 
-   <div id="leftcolumn">
-     <h1>Header H1</h1>
-<img src="images/img3.jpg" class="floatTL" alt="nice apartment" />
+  <div>
+    <div id="centercolumn">
+      <h1>{% block encabezado %}{% endblock %}</h1>
+      <div>{% block contenido %}{% endblock %}</div>
+    </div>
+    <div id="rightcolumn">
+      <h4><b>Links</b></h4>
+      <ul>
+        <li><a href="/" title="">Inicio</a></li>
+        <li><a href="/todas" title="">Todas las actividades</a></li>
+        <li><a href="/ayuda" title="">Ayuda</a></li>
+      </ul>
       
- 
-      <p>Parrafada de aqui </p>
-<h2>Sub header H2</h2>
-  
+      <h4><b>Noticias</b></h4>
+      <blockquote><p>¡Eventos actualizados cada dia!</p>
+      </blockquote>
+    </div>
+  </div>
 
-<p>Parrafada mas pequeña aqui</p>
+  <div id="footer">
+      <br /> Copyright &copy; 2015 by Daniel Crespo. Designed by: <a href="https://github.com/creespow"title="my_name">creespow</a>
+  </div>
 
-
-   
-   <div id="rightcolumn">
-      <p><b>Links</b></p>
-      	<ul>
-		<li><a href="http://www.getcsstemplates.com" title="free css templates">CSS Layouts</a></li>
-		<li><a href="#" title="">Link Two</a></li>
-		<li><a href="#" title="">Link Three</a></li>
-		<li><a href="#" title="">Link Four</a></li>
-		<li><a href="#" title="">Link Five</a></li>
-	</ul>
-     <h4>More Links</h4>
-	<ul>
-		<li><a href="#">Example Link 1</a></li>
-		<li><a href="#">Example Link 2</a></li>
-		<li><a href="#">Example Link 3</a></li>
-		<li><a href="#">Example Link 4</a></li>
-	</ul>
-     <h4>News</h4>
-<blockquote><p>Nulla facilisi.Lorem ipsum dolor sit amet, <a href="#">consectetuer adipiscing</a> elit.</p></blockquote>
-   </div>
-   
-   <div id="footer">
-       <br /> Copyright &copy; 2015 by Daniel Crespo. Designed by: <a href="https://github.com/creespow"title="my_name">creespow</a>   </div>
 </div>
-   
 </body>
 </html>

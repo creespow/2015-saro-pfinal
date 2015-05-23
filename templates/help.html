@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+
+
+{% block titulo %} Ayuda {% endblock %}
+
+{% block encabezado %} 
+    <h1>Funcionamiento de la web</h1>
+{% endblock %}
+
+{% block contenido %}
+  <p>
+    <pre>
+        
+        /: Pagina principal de la web.
+        Mostrara un listado de las diez actividades
+        de ocio y cultura mas proximas en el tiempo.
+    
+        /todas: Pagina con todas las actividades de ocio y de cultura.
+        En la parte superior de la pagina, existe un formulario que 
+        permite filtrar estas actividades segun varios campos.
+        Junto a cada actividad de la lista, se incluira un boton que permitira
+        elegir la incidencia para la pagina personal del usuario autenticado.
+        (Para crear una cuenta contacta con el Admin de sitio)
+
+        /usuario: Pagina personal de un usuario. Si la URL es “/usuario”,
+        es que corresponde al usuario “usuario”. Mostrara las actividades de ocio y de cultura seleccionadas por ese usuario.
+        /usuario/rss: Canal RSS para las actividades seleccionadas por ese usuario.
+
+        /ayuda: Pagina con informacion HTML explicando el funcionamiento de la web.
+    </pre>
+    </p> 
+{% endblock %}
+
+{% block login %}
+    <a href="/login" title="">Login</a>    
+{% endblock %}

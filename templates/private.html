@@ -1,9 +1,12 @@
 {% extends 'base.html' %}
-{% block titulo %}Bienvenido{% endblock %}
-{% block encabezado %} 
-	<h1>Bienvenido</h1>
+
+{% block titulo %}Pagina personal{% endblock %}
+
+{% block login %}
+<a href="/private" title="">{{user.username}}</a>
+<a href="/logout" title="">Logout</a>
 {% endblock %}
+
 {% block contenido %}
-	<p>Bievenido {{user.username|upper}}, 
-		
+	Contenidos del user aqui		
 {% endblock %}

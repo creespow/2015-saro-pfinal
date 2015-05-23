@@ -5,15 +5,16 @@
 {% block titulo %} INICIO  {% endblock %}
 
 {% block encabezado %} 
-	<h1>Eventos mas proximos</h1>
+    <h1>Eventos mas proximos</h1>
 {% endblock %}
 
 {% block contenido %}
   <p>
-	  {{out|safe}}
-  </p>	
+      {{out|safe}}
+  </p>  
 {% endblock %}
 
 {% block login %}
-    <a href="/login" title="">Login</a>    
+    <a href="/{{user.username}}" title="">{{user.username}}</a>
+    <a href="/logout" title="">Logout</a>
 {% endblock %}

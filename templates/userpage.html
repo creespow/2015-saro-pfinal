@@ -1,17 +1,17 @@
 {% extends 'base.html' %}
 
-{% comment %} HTML pagina inicio{% endcomment %}
+{% comment %} HTML de cada user (sin registrar){% endcomment %}
 
 {% block titulo %} INICIO  {% endblock %}
 
 {% block encabezado %} 
-	<h1>Eventos mas proximos</h1>
+    <h1>Eventos mas cercanos</h1>
 {% endblock %}
 
 {% block contenido %}
   <p>
-	  {{out|safe}}
-  </p>	
+      {{out|safe}}
+  </p>  
 {% endblock %}
 
 {% block login %}

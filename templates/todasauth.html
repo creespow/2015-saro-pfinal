@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% comment %} HTML todas las actividades{% endcomment %}
+
+{% block titulo %} Todas las actividades  {% endblock %}
+
+{% block encabezado %} 
+    <h1>Eventos en la comunidad de Madrid</h1>
+{% endblock %}
+
+{% block contenido %}
+   
+    <form class="auth-filtre" action="" method="post">
+    Titulo:{% csrf_token %}
+    <input type="text" name="title">    
+    Fecha:{% csrf_token %}
+    <input type="text" name="date">
+    Precio:{% csrf_token %}
+    <input type="text" name="price">
+    
+    <input class="myButton2" type="submit" value="Filtrar">
+    </form> 
+   
+    <form action="." method="post">
+        {% csrf_token %}        
+    <input id="refresh" class="myButton2" type="submit" value="Refresh" />
+    </form>
+
+    {{out|safe}}
+{% endblock %}
+
+{% block login %}
+    <a href="/{{user.username}}" title="">{{user.username}}</a>
+    <a href="/logout" title="">Logout</a>    
+{% endblock %}
